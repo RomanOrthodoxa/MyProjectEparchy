@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище EparchyModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Church">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quantity_ecclesiastic" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="IdChurch" Type="int" />
+          <Property Name="IdSpiritualMinister" Type="int" />
+        </EntityType>
+        <EntityType Name="SpiritualMinister">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Holy_orders" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="IdChurch" Type="int" />
+        </EntityType>
+        <EntityType Name="YouthConvention">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__event__IdChurch__5EBF139D">
+          <End Role="Church" Type="Self.Church" Multiplicity="0..1" />
+          <End Role="event" Type="Self.event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Church">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="event">
+              <PropertyRef Name="IdChurch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__event__IdSpiritu__5DCAEF64">
+          <End Role="SpiritualMinister" Type="Self.SpiritualMinister" Multiplicity="0..1" />
+          <End Role="event" Type="Self.event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpiritualMinister">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="event">
+              <PropertyRef Name="IdSpiritualMinister" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Spiritual__IdChu__571DF1D5">
+          <End Role="Church" Type="Self.Church" Multiplicity="0..1" />
+          <End Role="SpiritualMinister" Type="Self.SpiritualMinister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Church">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SpiritualMinister">
+              <PropertyRef Name="IdChurch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище EparchyModelContainer">
+          <EntitySet Name="Church" EntityType="Self.Church" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="event" EntityType="Self.event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpiritualMinister" EntityType="Self.SpiritualMinister" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="YouthConvention" EntityType="Self.YouthConvention" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__event__IdChurch__5EBF139D" Association="Self.FK__event__IdChurch__5EBF139D">
+            <End Role="Church" EntitySet="Church" />
+            <End Role="event" EntitySet="event" />
+          </AssociationSet>
+          <AssociationSet Name="FK__event__IdSpiritu__5DCAEF64" Association="Self.FK__event__IdSpiritu__5DCAEF64">
+            <End Role="SpiritualMinister" EntitySet="SpiritualMinister" />
+            <End Role="event" EntitySet="event" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Spiritual__IdChu__571DF1D5" Association="Self.FK__Spiritual__IdChu__571DF1D5">
+            <End Role="Church" EntitySet="Church" />
+            <End Role="SpiritualMinister" EntitySet="SpiritualMinister" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EparchyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Church">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity_ecclesiastic" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="events" Relationship="Self.FK__event__IdChurch__5EBF139D" FromRole="Church" ToRole="event" />
+          <NavigationProperty Name="SpiritualMinisters" Relationship="Self.FK__Spiritual__IdChu__571DF1D5" FromRole="Church" ToRole="SpiritualMinister" />
+        </EntityType>
+        <EntityType Name="event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IdChurch" Type="Int32" />
+          <Property Name="IdSpiritualMinister" Type="Int32" />
+          <NavigationProperty Name="Church" Relationship="Self.FK__event__IdChurch__5EBF139D" FromRole="event" ToRole="Church" />
+          <NavigationProperty Name="SpiritualMinister" Relationship="Self.FK__event__IdSpiritu__5DCAEF64" FromRole="event" ToRole="SpiritualMinister" />
+        </EntityType>
+        <EntityType Name="SpiritualMinister">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Holy_orders" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdChurch" Type="Int32" />
+          <NavigationProperty Name="Church" Relationship="Self.FK__Spiritual__IdChu__571DF1D5" FromRole="SpiritualMinister" ToRole="Church" />
+          <NavigationProperty Name="events" Relationship="Self.FK__event__IdSpiritu__5DCAEF64" FromRole="SpiritualMinister" ToRole="event" />
+        </EntityType>
+        <EntityType Name="YouthConvention">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__event__IdChurch__5EBF139D">
+          <End Role="Church" Type="Self.Church" Multiplicity="0..1" />
+          <End Role="event" Type="Self.event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Church">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="event">
+              <PropertyRef Name="IdChurch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Spiritual__IdChu__571DF1D5">
+          <End Role="Church" Type="Self.Church" Multiplicity="0..1" />
+          <End Role="SpiritualMinister" Type="Self.SpiritualMinister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Church">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SpiritualMinister">
+              <PropertyRef Name="IdChurch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__event__IdSpiritu__5DCAEF64">
+          <End Role="SpiritualMinister" Type="Self.SpiritualMinister" Multiplicity="0..1" />
+          <End Role="event" Type="Self.event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpiritualMinister">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="event">
+              <PropertyRef Name="IdSpiritualMinister" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EparchyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Churches" EntityType="Self.Church" />
+          <EntitySet Name="events" EntityType="Self.event" />
+          <EntitySet Name="SpiritualMinisters" EntityType="Self.SpiritualMinister" />
+          <EntitySet Name="YouthConventions" EntityType="Self.YouthConvention" />
+          <AssociationSet Name="FK__event__IdChurch__5EBF139D" Association="Self.FK__event__IdChurch__5EBF139D">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="event" EntitySet="events" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Spiritual__IdChu__571DF1D5" Association="Self.FK__Spiritual__IdChu__571DF1D5">
+            <End Role="Church" EntitySet="Churches" />
+            <End Role="SpiritualMinister" EntitySet="SpiritualMinisters" />
+          </AssociationSet>
+          <AssociationSet Name="FK__event__IdSpiritu__5DCAEF64" Association="Self.FK__event__IdSpiritu__5DCAEF64">
+            <End Role="SpiritualMinister" EntitySet="SpiritualMinisters" />
+            <End Role="event" EntitySet="events" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище EparchyModelContainer" CdmEntityContainer="EparchyEntities">
+          <EntitySetMapping Name="Churches">
+            <EntityTypeMapping TypeName="EparchyModel.Church">
+              <MappingFragment StoreEntitySet="Church">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Quantity_ecclesiastic" ColumnName="Quantity_ecclesiastic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="events">
+            <EntityTypeMapping TypeName="EparchyModel.event">
+              <MappingFragment StoreEntitySet="event">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="IdChurch" ColumnName="IdChurch" />
+                <ScalarProperty Name="IdSpiritualMinister" ColumnName="IdSpiritualMinister" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpiritualMinisters">
+            <EntityTypeMapping TypeName="EparchyModel.SpiritualMinister">
+              <MappingFragment StoreEntitySet="SpiritualMinister">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Holy_orders" ColumnName="Holy_orders" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="IdChurch" ColumnName="IdChurch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YouthConventions">
+            <EntityTypeMapping TypeName="EparchyModel.YouthConvention">
+              <MappingFragment StoreEntitySet="YouthConvention">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

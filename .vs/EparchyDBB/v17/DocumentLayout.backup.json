@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\addstudentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\addstudentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\addstudentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\addstudentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|c:\\users\\\u043F\u043A\\source\\repos\\eparchydbb\\eparchydbb\\model\\eparchymodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{26327ACE-731A-4E4B-AB03-40385011C1F3}|EparchyDBB\\EparchyDBB.csproj|solutionrelative:eparchydbb\\model\\eparchymodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddStudentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\AddStudentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EparchyDBB\\AddStudentWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\AddStudentWindow.xaml.cs",
+              "RelativeToolTip": "EparchyDBB\\AddStudentWindow.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T00:39:34.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddStudentWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\AddStudentWindow.xaml",
+              "RelativeDocumentMoniker": "EparchyDBB\\AddStudentWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\AddStudentWindow.xaml",
+              "RelativeToolTip": "EparchyDBB\\AddStudentWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T00:38:10.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "EparchyDBB\\ViewModel\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeToolTip": "EparchyDBB\\ViewModel\\MainWindowViewModel.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwDsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T23:19:00.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\ViewModel\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "EparchyDBB\\ViewModel\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\ViewModel\\BaseViewModel.cs",
+              "RelativeToolTip": "EparchyDBB\\ViewModel\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T23:18:48.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EparchyDBB\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\MainWindow.xaml.cs",
+              "RelativeToolTip": "EparchyDBB\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwC0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T23:10:23.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EparchyDBB\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\MainWindow.xaml",
+              "RelativeToolTip": "EparchyDBB\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-25T23:10:23.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EparchyModel.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\Model\\EparchyModel.edmx",
+              "RelativeDocumentMoniker": "EparchyDBB\\Model\\EparchyModel.edmx",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\EparchyDBB\\EparchyDBB\\Model\\EparchyModel.edmx [Diagram1]",
+              "RelativeToolTip": "EparchyDBB\\Model\\EparchyModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-03-25T23:17:06.581Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
